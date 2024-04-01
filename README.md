@@ -493,7 +493,7 @@ mainSection:Toggle({
     Default = true
     },
     function(val)
-        while wait(0.5) do
+        while wait(0.2) do
             game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Space,false,game) 
         end
     end
@@ -711,7 +711,7 @@ playerSection:Keybind({
 
 playerSection:Toggle({
     Title = "Auto Equip",
-    Default = false
+    Default = true
     },
     function(val)
         autoequip = val
@@ -906,7 +906,7 @@ CombatSilentaimSection:Toggle({
 
 CombatSilentaimSection:Toggle({
     Title = "Auto farm (ALT)",
-    Default = true
+    Default = false
     },
     function(val)
         for i,v2 in pairs(getgc(true)) do
